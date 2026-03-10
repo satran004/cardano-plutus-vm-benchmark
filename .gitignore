@@ -1,0 +1,33 @@
+# Build artifacts
+*.o
+*.so
+*.dll
+*.exe
+target/
+bin/
+obj/
+zig-out/
+zig-cache/
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.docker/
+
+# Benchmark raw output (intermediate)
+/tmp-results/

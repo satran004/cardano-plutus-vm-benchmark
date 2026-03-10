@@ -1,0 +1,22 @@
+services:
+  benchmark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - CHRYSALIS_REPO=${CHRYSALIS_REPO:-https://github.com/SAIB-Inc/Chrysalis.git}
+        - CHRYSALIS_SHA=${CHRYSALIS_SHA:-d50ae2cf7fa4e3df0cba10986908b95fe3f1714f}
+        - UPLC_TURBO_REPO=${UPLC_TURBO_REPO:-https://github.com/pragma-org/uplc.git}
+        - UPLC_TURBO_SHA=${UPLC_TURBO_SHA:-6152616cfb32b18c32aaaa0b0529b8711ac2fc26}
+        - PLUTIGO_REPO=${PLUTIGO_REPO:-https://github.com/blinklabs-io/plutigo.git}
+        - PLUTIGO_SHA=${PLUTIGO_SHA:-83aaa7cf28c5de697f6fa062361e56793766c3cc}
+        - BLAZE_REPO=${BLAZE_REPO:-https://github.com/butaneprotocol/blaze-cardano.git}
+        - BLAZE_SHA=${BLAZE_SHA:-28367d38e18103daf9da42abce227d06486eea87}
+        - PLUTUZ_REPO=${PLUTUZ_REPO:-https://github.com/utxo-company/plutuz.git}
+        - PLUTUZ_SHA=${PLUTUZ_SHA:-33b812dbcf88f6851286e54cb93a4a443353f94c}
+        - OPSHIN_REPO=${OPSHIN_REPO:-https://github.com/OpShin/uplc.git}
+        - OPSHIN_SHA=${OPSHIN_SHA:-8216a056fa8eacace597b9a335174cc054c12bbe}
+    env_file:
+      - versions.env
+    volumes:
+      - ./results:/results
